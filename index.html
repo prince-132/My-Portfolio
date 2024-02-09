@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:image" content="https://github-production-user-asset-6210df.s3.amazonaws.com/68178267/288660460-f3b458c2-21d3-4d83-8724-d9f94cd7047d.jpg">
+    <meta property="og:title" content="Amit Yadav - Portfolio">
+    <meta property="og:description" content="A website portfolio displaying information about me and my work">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./resources/tab-icon.png">
+    <link rel="stylesheet" href="./app.css">
+    <title>Gyanendra Shukla - Portfolio</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="./app.js" defer></script>
+    <header class="top-bar">
+        <a class="tile" id="logo-container" href="#home">
+            <!-- <img id="logoimg" src="./resources/logo.svg" alt="AK LOGO"> <span id="logotext"></span> -->
+        </a>
+        <nav class="top-bar-buttons">
+            <a class="nav-button" id="home-link" href="#home">Home</a>
+            <a class="nav-button" id="projects-link" href="#projects">Projects</a>
+            <a class="nav-button" id="about-link" href="#about">About</a>
+            <a class="nav-button" id="contact-link" href="#contact">Contact</a>
+            <script>
+                for (const navlink of document.getElementsByClassName("nav-button")) {
+                    navlink.addEventListener("click", () => {
+                        document.getElementsByClassName("top-bar-buttons")[0].classList.remove("visible")
+                    })
+                }
+            </script>
+        </nav>
+        <div class="top-bar-actions">
+            <button class="theme-switch-div" name="Theme Switch Button" aria-label="Change Theme Button">
+                <svg height="40" version="1.1" viewBox="0 0 60.601 61.187" id="theme-switch-button"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="filter10794" x="-.19377" y="-.40112" width="1.3875" height="1.8022"
+                            color-interpolation-filters="sRGB">
+                            <feFlood flood-color="rgb(255,61,5)" flood-opacity=".96471" result="flood" />
+                            <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1" />
+                            <feGaussianBlur in="composite1" result="blur" stdDeviation="3.9" />
+                            <feOffset dx="-1.38778e-16" dy="0" result="offset" />
+                            <feComposite in="SourceGraphic" in2="offset" result="composite2" />
+                        </filter>
+                        <filter id="filter383" x="0" y="0" width="1" height="1" color-interpolation-filters="sRGB">
+                            <feFlood flood-color="rgb(0,0,0)" flood-opacity="0" result="flood" />
+                            <feComposite in="flood" in2="SourceGraphic" operator="out" result="composite1" />
+                            <feGaussianBlur in="composite1" result="blur" />
+                            <feOffset dx="0" dy="0" result="offset" />
+                            <feComposite in="offset" in2="SourceGraphic" operator="atop" result="composite2" />
+                        </filter>
+                    </defs>
+                    <rect x="27.059" y="23.992" width="5.0727" height="31.07" fill="#CCCCCC"
+                        style="paint-order:markers stroke fill" />
+                    <path class="lamp-string"
+                        d="m18.393 47.379a2.8745 3.0436 0 0 1-2.8745 3.0436 2.8745 3.0436 0 0 1-2.8745-3.0436 2.8745 3.0436 0 0 1 2.8745-3.0436 2.8745 3.0436 0 0 1 2.8745 3.0436zm-3.7623-21.432h1.9023v21.305h-1.9023z"
+                        fill="#bababa" style="paint-order:markers stroke fill" />
+                    <path
+                        d="m20.066 5.8129h20.095c0.77125 0 2.7452 1.6098 3.5219 2.9168l10.399 17.501c0.82545 1.3892-1.3009 2.9168-2.9168 2.9168h-42.104c-1.6159 0-3.7423-1.5276-2.9168-2.9168l10.399-17.501c0.77665-1.307 2.7506-2.9168 3.5219-2.9168z"
+                        fill="#adadad" filter="url(#filter383)" style="paint-order:markers stroke fill" />
+                    <path class="lamp-body"
+                        d="m20.055 5.7302h20.095c0.77125 0 2.7452 1.6098 3.5219 2.9168l10.399 17.501c0.82545 1.3892-1.3009 2.9168-2.9168 2.9168h-42.104c-1.6159 0-3.7423-1.5276-2.9168-2.9168l10.399-17.501c0.77665-1.307 2.7506-2.9168 3.5219-2.9168z"
+                        fill="#ff9373" filter="url(#filter10794)" style="paint-order:markers stroke fill" />
+                    <rect x="16.854" y="53.794" width="26.125" height="6.975" rx="1.9023" ry="2.9168" fill="#bababa"
+                        style="paint-order:markers stroke fill" />
+                </svg>
+            </button>
+            <button type="button" name="Navigation Menu Button" id="nav-toggle">
+                <span class="nav-toggle-line" id="l1"></span>
+                <span class="nav-toggle-line" id="l2"></span>
+                <span class="nav-toggle-line" id="l3"></span>
+            </button>
+            <script>
+                const navToggle = document.getElementById("nav-toggle")
+                navToggle.addEventListener("click", () => {
+                    document.getElementsByClassName("top-bar-buttons")[0].classList.toggle("visible")
+                })
+            </script>
+        </div>
+    </header>
+    <img id="background-svg" src="./resources/bg-design.svg">
+    <section class="cover-div" id="home">
+        <div class="content">
+            <h1 class="content-title">
+                <span>Hi, I am </span><span id="fullname">Gyanendra Nath Shukla</span>
+            </h1>
+            <p class="content-desc">
+                Aspiring Software Engineer
+                
+            </p>
+        </div>
+    </section>
+    <section class="second-div">
+        <h1 id="second-h1">I love turning
+            <span id="word-design"><span>Designs</span></span>
+            <span id="word-into">into</span>
+            <span id="word-code"></span><span id="cursor">_</span>
+        </h1>
+        <div class="decoration-bar" id="b1"></div>
+        <div class="decoration-bar" id="b2"></div>
+        <div class="decoration-bar" id="b3"></div>
+        <div class="decoration-bar" id="b4"></div>
+    </section>
+    <section class="projects-div" id="projects">
+        <h1 class="glowing">My Projects</h1>
+        <div class="projects-list">
+
+        </div>
+    </section>
+    <section class="myself-div" id="about">
+        <h1 class="glowing" id="myself-title">About Me</h1>
+    </section>
+    <section class="skills-div">
+        <div class="main-skills">
+
+        </div>
+        <div class="skills-divisions">
+            <div class="know-skills">
+
+            </div>
+            <div class="touch-skills">
+
+            </div>
+        </div>
+    </section>
+    <section class="aboutme-div">
+        <span class="aboutme-div-title">Uncovering My Distinctive Approach</span>
+        <div class="aboutme-cards-div"></div>
+    </section>
+    <section class="trifecta-div">
+        <h1 id="trifecta-title">My Artistic Trifecta</h1>
+        <div class="trifecta-content-div">
+            <div class="trifecta-text">
+                <span class="trifecta-item" id="focus-creativity">
+                    <span class="c-letter">C</span><span class="c-letter">r</span><span class="c-letter">e</span><span
+                        class="c-letter">a</span><span class="c-letter">t</span><span class="c-letter">i</span><span
+                        class="c-letter">v</span><span class="c-letter">i</span><span class="c-letter">t</span><span
+                        class="c-letter">y</span>
+                </span>
+                <span class="trifecta-item" id="focus-simplicity">
+                    <span class="s-letter">S</span><span class="s-letter">i</span><span class="s-letter">m</span><span
+                        class="s-letter">p</span><span class="s-letter">l</span><span class="s-letter">i</span><span
+                        class="s-letter">c</span><span class="s-letter">i</span><span class="s-letter">t</span><span
+                        class="s-letter">y</span>
+                </span>
+                <span class="trifecta-item" id="focus-perfection">
+                    <span class="letter">P</span><span class="letter">e</span><span class="letter">r</span><span
+                        class="letter">f</span><span class="letter">e</span><span class="letter">c</span><span
+                        class="letter">t</span><span class="letter">i</span><span class="letter">o</span><span
+                        class="letter">n</span>
+                </span>
+                <span id="hover-help">● Interactive Elements ●</span>
+            </div>
+            <div class="trifecta-visual">
+                <div class="shapes">
+                    <div class="shape" id="shape1"></div>
+                    <div class="shape" id="shape2"></div>
+                    <div class="shape" id="shape3"></div>
+                    <div class="shape" id="shape4"></div>
+                    <div class="shape" id="shape5"></div>
+                    <div class="shape" id="shape6"></div>
+                    <div class="shape" id="shape7"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-div" id="contact">
+        <h1 class="glowing">Contact Me</h1>
+        <div class="contact-types">
+            <div class="contact-links">
+                <h2>My Socials</h2>
+                <a class="contact-link clink" id="email-link" href="mailto:gyanendranathshukla4035@gmail.com">Email</a>
+                <!-- <span type="button" id="copy-email">abhineetkelleyformal@gmail.com</span> -->
+                <a class="contact-link clink" href="www.linkedin.com/in/gyanendra-sde">LinkedIn</a>
+                <a class="contact-link clink" href="https://www.instagram.com/mr_princeshukla/">Instagram</a>
+            </div>
+            <div class="profiles">
+                <h2>My Profiles</h2>
+                <div class="profile-links">
+                    <a class="profile-link clink" href="https://github.com/prince-132">GitHub</a>
+                    <a class="profile-link clink" href="https://leetcode.com/Gyanendra_23/">Leetcode</a>
+                    <a class="profile-link clink" href="https://www.hackerrank.com/profile/gyanendranathsh1">Hackerrank</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
